@@ -27,12 +27,12 @@ use work.adc_receiver_def_pkg.all;
 entity adc_control_wrapper is
   generic (
     -- Core ID and version
-    USER_CORE_ID_VER : std_logic_vector(31 downto 0) := X"00020003";
+    USER_CORE_ID_VER : std_logic_vector(31 downto 0) := X"20260218";
     N                : integer                       := 16;          --number of ADC channels
     N1               : integer                       := 14;          --number of ADC channels in receiver 1
     N2               : integer                       := 2;           --number of ADC channels in receiver 2
     RES_ADC          : integer                       := 14;          --ADC bit resolution
-    FIFO_EMPTY_VAL   : std_logic_vector(31 downto 0) := X"00000DEF"; --output value when attempting to read from empty FIFO
+    FIFO_EMPTY_VAL   : std_logic_vector(31 downto 0) := X"CAFECAFE"; --output value when attempting to read from empty FIFO
     N_tr_b           : integer                       := 10           --bits for downsampler treshold register
   );
   port (

@@ -1,5 +1,5 @@
-# Vivado Project Files
-*.xpr
+# Vivado Project Files (KEEP .xpr to recreate project in new folders)
+# *.xpr - TRACKED (project file needed to open design)
 *.jou
 *.log
 *.pb
@@ -16,7 +16,7 @@
 *.gen/
 *.backup/
 
-# Vivado Generated Files
+# Vivado Generated Files (intermediate products)
 *.xci
 *.edn
 *.veo
@@ -33,9 +33,11 @@
 *.prf
 *.twr
 *.twx
-*.bit
-*.bin
-*.elf
+
+# Compiled Bitstream Files (TRACKED - keep versions in repository)
+# *.bit - TRACKED
+# *.bin - TRACKED
+# *.elf - TRACKED
 
 # Vivado HLS
 vivado_hls.app/
