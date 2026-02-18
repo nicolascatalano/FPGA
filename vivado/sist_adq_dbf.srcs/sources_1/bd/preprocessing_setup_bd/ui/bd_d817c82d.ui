@@ -1,0 +1,46 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.818045",
+   "Default View_TopLeft":"-509,2",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_adc_clk_0 -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_adc_rst_ni_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_s_axis_adc_tvalid -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_s_axis_freq_config_tvalid -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus control_in_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus data_band_sel_osc -pg 1 -lvl 3 -x 1110 -y 20 -defaultsOSRD
+preplace portBus m_axis_tdata_mux_o -pg 1 -lvl 3 -x 1110 -y 40 -defaultsOSRD
+preplace portBus m_axis_tvalid_mux_o_0 -pg 1 -lvl 3 -x 1110 -y 60 -defaultsOSRD
+preplace portBus s_axis_adc_tdata -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus s_axis_freq_config_tdata -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace inst Band_selector_oscillator -pg 1 -lvl 1 -x 330 -y 250 -defaultsOSRD
+preplace inst Local_osc_hier -pg 1 -lvl 1 -x 330 -y 90 -defaultsOSRD
+preplace inst basic_counter_0 -pg 1 -lvl 1 -x 330 -y 390 -defaultsOSRD
+preplace inst copy_counter_N_times -pg 1 -lvl 1 -x 330 -y 590 -defaultsOSRD
+preplace inst copy_local_osc_N_times -pg 1 -lvl 1 -x 330 -y 790 -defaultsOSRD
+preplace inst data_source_mux_gene_0 -pg 1 -lvl 2 -x 840 -y 640 -defaultsOSRD
+preplace netloc Band_selector_oscillator_m_axis_data_tdata 1 1 2 NJ 250 1060
+preplace netloc Local_osc_hier_m_axis_tdata 1 0 2 110 0 550
+preplace netloc Local_osc_hier_m_axis_tvalid 1 0 2 100 170 550
+preplace netloc adc_clk_0_2 1 0 2 90 890 580
+preplace netloc adc_rst_ni_0_1 1 0 2 50 900 590
+preplace netloc adc_tdata_0_1 1 0 2 20J 470 570
+preplace netloc adc_tvalid_0_1 1 0 2 30J 480 560
+preplace netloc basic_counter_0_m_axis_tdata 1 0 2 120 490 540
+preplace netloc basic_counter_0_m_axis_tvalid 1 0 2 120 690 550
+preplace netloc control_in_0_1 1 0 2 60J 910 600
+preplace netloc copy_counter_N_times_m_axis_tdata_out 1 1 1 570 590n
+preplace netloc copy_counter_N_times_m_axis_tvalid_out 1 1 1 560 610n
+preplace netloc copy_local_osc_N_times_m_axis_tdata_out 1 1 1 560 670n
+preplace netloc copy_local_osc_N_times_m_axis_tvalid_out 1 1 1 570 690n
+preplace netloc data_source_mux_gene_0_m_axis_tdata_o 1 2 1 1070 40n
+preplace netloc data_source_mux_gene_0_m_axis_tvalid_o 1 1 2 NJ 270 1080
+preplace netloc s_axis_config_tdata_0_1 1 0 1 80 100n
+preplace netloc s_axis_config_tvalid_0_1 1 0 1 70 100n
+levelinfo -pg 1 0 330 840 1110
+pagesize -pg 1 -db -bbox -sgen -270 -10 1360 930
+"
+}
+0

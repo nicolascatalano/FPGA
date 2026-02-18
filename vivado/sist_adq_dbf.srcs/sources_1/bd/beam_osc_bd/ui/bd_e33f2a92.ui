@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-384,-187",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_adc_clk_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_adc_rst_ni_0 -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port port-id_config_sign_data_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_config_sign_valid_0 -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_s_axis_config_tvalid_0 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus m_axis_tdata_out_0 -pg 1 -lvl 3 -x 920 -y 20 -defaultsOSRD
+preplace portBus s_axis_config_tdata_0 -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace inst Ch_oscillator_hier -pg 1 -lvl 1 -x 260 -y 90 -defaultsOSRD
+preplace inst complex_conjugator_0 -pg 1 -lvl 2 -x 680 -y 170 -defaultsOSRD
+preplace netloc Ch_oscillator_hier_m_axis_tdata 1 1 1 450 80n
+preplace netloc Ch_oscillator_hier_m_axis_tvalid 1 1 1 440 100n
+preplace netloc adc_clk_0_1 1 0 2 80 170 N
+preplace netloc adc_rst_ni_0_1 1 0 2 70 190 N
+preplace netloc complex_conjugator_0_m_axis_tdata_out 1 2 1 890 20n
+preplace netloc config_sign_data_0_1 1 0 2 30J 210 N
+preplace netloc config_sign_valid_0_1 1 0 2 20J 230 N
+preplace netloc s_axis_config_tdata_0_1 1 0 1 50 100n
+preplace netloc s_axis_config_tvalid_0_1 1 0 1 40 100n
+levelinfo -pg 1 0 260 680 920
+pagesize -pg 1 -db -bbox -sgen -250 0 1150 290
+"
+}
+0

@@ -1,0 +1,386 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xC2A84A8A172B32CB",
+      "device": "xc7z030fbg676-2",
+      "gen_directory": "../../../../sist_adq_dbf.gen/sources_1/bd/band_processing_bd",
+      "name": "band_processing_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Band_filter_hier": {
+        "Band_filter": "",
+        "dsp_complex_gain_0": ""
+      },
+      "Band_mixer": "",
+      "zero_padder_0": ""
+    },
+    "ports": {
+      "adc_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "adc_rst_ni_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "band_processing_bd_adc_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "260000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "adc_rst_ni_0": {
+        "direction": "I"
+      },
+      "band_mixer_data_o": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "band_mixer_valid_o": {
+        "direction": "O"
+      },
+      "band_osc_in": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "data_mux_in": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "data_out": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "valid_mux_in": {
+        "direction": "I"
+      },
+      "valid_out": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "Band_filter_hier": {
+        "ports": {
+          "adc_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "m_axis_data_tdata": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "m_axis_data_tvalid": {
+            "direction": "O"
+          },
+          "s_axis_data_tvalid": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "Band_filter": {
+            "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+            "ip_revision": "23",
+            "xci_name": "band_processing_bd_Band_filter_0",
+            "xci_path": "ip\\band_processing_bd_Band_filter_0\\band_processing_bd_Band_filter_0.xci",
+            "inst_hier_path": "Band_filter_hier/Band_filter",
+            "parameters": {
+              "Clock_Frequency": {
+                "value": "260"
+              },
+              "CoefficientSource": {
+                "value": "COE_File"
+              },
+              "Coefficient_File": {
+                "value": "../../../../../../../filters/bandpass.coe"
+              },
+              "Coefficient_Fractional_Bits": {
+                "value": "19"
+              },
+              "Coefficient_Sets": {
+                "value": "1"
+              },
+              "Coefficient_Sign": {
+                "value": "Signed"
+              },
+              "Coefficient_Structure": {
+                "value": "Inferred"
+              },
+              "Coefficient_Width": {
+                "value": "16"
+              },
+              "ColumnConfig": {
+                "value": "3"
+              },
+              "Data_Fractional_Bits": {
+                "value": "0"
+              },
+              "Data_Width": {
+                "value": "16"
+              },
+              "Decimation_Rate": {
+                "value": "8"
+              },
+              "Filter_Architecture": {
+                "value": "Systolic_Multiply_Accumulate"
+              },
+              "Filter_Type": {
+                "value": "Decimation"
+              },
+              "Interpolation_Rate": {
+                "value": "1"
+              },
+              "Number_Channels": {
+                "value": "1"
+              },
+              "Number_Paths": {
+                "value": "2"
+              },
+              "Output_Rounding_Mode": {
+                "value": "Truncate_LSBs"
+              },
+              "Output_Width": {
+                "value": "16"
+              },
+              "Quantization": {
+                "value": "Quantize_Only"
+              },
+              "RateSpecification": {
+                "value": "Frequency_Specification"
+              },
+              "Sample_Frequency": {
+                "value": "65"
+              },
+              "Zero_Pack_Factor": {
+                "value": "1"
+              }
+            }
+          },
+          "dsp_complex_gain_0": {
+            "vlnv": "xilinx.com:module_ref:dsp_complex_gain:1.0",
+            "ip_revision": "1",
+            "xci_name": "band_processing_bd_dsp_complex_gain_0_0",
+            "xci_path": "ip\\band_processing_bd_dsp_complex_gain_0_0\\band_processing_bd_dsp_complex_gain_0_0.xci",
+            "inst_hier_path": "Band_filter_hier/dsp_complex_gain_0",
+            "parameters": {
+              "SHIFT_BY": {
+                "value": "2"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "dsp_complex_gain",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "data_in": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data_out": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              }
+            }
+          }
+        },
+        "nets": {
+          "Band_filter_m_axis_data_tdata": {
+            "ports": [
+              "Band_filter/m_axis_data_tdata",
+              "m_axis_data_tdata"
+            ]
+          },
+          "Band_filter_m_axis_data_tvalid": {
+            "ports": [
+              "Band_filter/m_axis_data_tvalid",
+              "m_axis_data_tvalid"
+            ]
+          },
+          "Band_mixer_m_axis_dout_tdata": {
+            "ports": [
+              "data_in",
+              "dsp_complex_gain_0/data_in"
+            ]
+          },
+          "Band_mixer_m_axis_dout_tvalid": {
+            "ports": [
+              "s_axis_data_tvalid",
+              "Band_filter/s_axis_data_tvalid"
+            ]
+          },
+          "aclk_0_1": {
+            "ports": [
+              "adc_clk",
+              "Band_filter/aclk"
+            ]
+          },
+          "dsp_complex_gain_0_data_out": {
+            "ports": [
+              "dsp_complex_gain_0/data_out",
+              "Band_filter/s_axis_data_tdata"
+            ]
+          }
+        }
+      },
+      "Band_mixer": {
+        "vlnv": "xilinx.com:ip:cmpy:6.0",
+        "ip_revision": "25",
+        "xci_name": "band_processing_bd_Band_mixer_0",
+        "xci_path": "ip\\band_processing_bd_Band_mixer_0\\band_processing_bd_Band_mixer_0.xci",
+        "inst_hier_path": "Band_mixer",
+        "parameters": {
+          "ARESETN": {
+            "value": "true"
+          },
+          "BPortWidth": {
+            "value": "16"
+          },
+          "FlowControl": {
+            "value": "NonBlocking"
+          },
+          "MinimumLatency": {
+            "value": "5"
+          },
+          "MultType": {
+            "value": "Use_LUTs"
+          },
+          "OptimizeGoal": {
+            "value": "Resources"
+          },
+          "OutputWidth": {
+            "value": "16"
+          },
+          "RoundMode": {
+            "value": "Truncate"
+          }
+        }
+      },
+      "zero_padder_0": {
+        "vlnv": "xilinx.com:module_ref:zero_padder:1.0",
+        "ip_revision": "1",
+        "xci_name": "band_processing_bd_zero_padder_0_0",
+        "xci_path": "ip\\band_processing_bd_zero_padder_0_0\\band_processing_bd_zero_padder_0_0.xci",
+        "inst_hier_path": "zero_padder_0",
+        "parameters": {
+          "LSB_PADDING": {
+            "value": "false"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "zero_padder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Band_filter_hier_m_axis_data_tdata": {
+        "ports": [
+          "Band_filter_hier/m_axis_data_tdata",
+          "data_out"
+        ]
+      },
+      "Band_filter_hier_m_axis_data_tvalid": {
+        "ports": [
+          "Band_filter_hier/m_axis_data_tvalid",
+          "valid_out"
+        ]
+      },
+      "Band_mixer_m_axis_dout_tdata": {
+        "ports": [
+          "Band_mixer/m_axis_dout_tdata",
+          "band_mixer_data_o",
+          "Band_filter_hier/data_in"
+        ]
+      },
+      "Band_mixer_m_axis_dout_tvalid": {
+        "ports": [
+          "Band_mixer/m_axis_dout_tvalid",
+          "band_mixer_valid_o",
+          "Band_filter_hier/s_axis_data_tvalid"
+        ]
+      },
+      "adc_clk_0_1": {
+        "ports": [
+          "adc_clk_0",
+          "Band_filter_hier/adc_clk",
+          "Band_mixer/aclk"
+        ]
+      },
+      "adc_rst_ni_0_1": {
+        "ports": [
+          "adc_rst_ni_0",
+          "Band_mixer/aresetn"
+        ]
+      },
+      "data_in_0_1": {
+        "ports": [
+          "data_mux_in",
+          "zero_padder_0/data_in"
+        ]
+      },
+      "s_axis_a_tdata_0_1": {
+        "ports": [
+          "band_osc_in",
+          "Band_mixer/s_axis_a_tdata"
+        ]
+      },
+      "s_axis_a_tvalid_0_1": {
+        "ports": [
+          "valid_mux_in",
+          "Band_mixer/s_axis_a_tvalid",
+          "Band_mixer/s_axis_b_tvalid"
+        ]
+      },
+      "zero_padder_0_data_out": {
+        "ports": [
+          "zero_padder_0/data_out",
+          "Band_mixer/s_axis_b_tdata"
+        ]
+      }
+    }
+  }
+}

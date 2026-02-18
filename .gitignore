@@ -1,0 +1,143 @@
+# Vivado Project Files
+*.xpr
+*.jou
+*.log
+*.pb
+*.str
+*.rpt
+
+# Vivado Generated Directories
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+*.backup/
+
+# Vivado Generated Files
+*.xci
+*.edn
+*.veo
+*.v
+*.ngc
+*.vho
+*.vm
+*.eblk
+*.bd_list
+*.mcs
+*.mmi
+*.ncd
+*.ngd
+*.prf
+*.twr
+*.twx
+*.bit
+*.bin
+*.elf
+
+# Vivado HLS
+vivado_hls.app/
+hls_ip/
+
+# IP Cores
+ip_repo/
+xilinx_ip/
+
+# Constraint Files (optional - include in git usually)
+# *.xdc
+
+# Simulation Files
+sim/
+isim/
+xsim/
+*.wdb
+*.vcd
+*.asedb
+*.xsim/
+
+# Implementation Reports
+impl_1/
+synth_1/
+report/
+*.rpt
+*.xml
+*.html
+*.txt
+
+# Design Checkpoints
+*.dcp
+
+# Documentation (optional)
+# doc/
+
+# Temporary Files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+*.swn
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+*.lnk
+$RECYCLE.BIN/
+
+# Linux
+.directory
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Project Specific
+capturas/
+_avg_/
+NA/
+gnuradio/
+gnuradio_streaming/
+ARM_Development/
+
+# Do NOT ignore these Vivado files:
+# !*.xdc (constraints files)
+# !*.vhd (VHDL source)
+# !tcl/* (TCL scripts)
+# !rtl/* (RTL code)
+# !constraints/ (constraints directory)
