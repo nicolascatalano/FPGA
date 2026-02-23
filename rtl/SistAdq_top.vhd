@@ -121,12 +121,12 @@ begin
   adc_control_wrapper_inst : entity work.adc_control_wrapper
     generic map(
       -- Core ID and version
-      USER_CORE_ID_VER => X"00020003",
+      USER_CORE_ID_VER => X"20260223",
       N                => 16,          --number of ADC channels
       N1               => 14,          --number of ADC channels in receiver 1
       N2               => 2,           --number of ADC channels in receiver 2
       RES_ADC          => 14,          --ADC bit resolution
-      FIFO_EMPTY_VAL   => X"00000DEF", --output value when attempting to read from empty FIFO
+      FIFO_EMPTY_VAL   => X"CAFECAFE", --output value when attempting to read from empty FIFO
       N_tr_b           => 10           --bits for downsampler treshold register
     )
     port map(
