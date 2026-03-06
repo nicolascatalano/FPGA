@@ -121,7 +121,7 @@ begin
   adc_control_wrapper_inst : entity work.adc_control_wrapper
     generic map(
       -- Core ID and version
-      USER_CORE_ID_VER => X"20260223",
+      USER_CORE_ID_VER => X"20260306",
       N                => 16,          --number of ADC channels
       N1               => 14,          --number of ADC channels in receiver 1
       N2               => 2,           --number of ADC channels in receiver 2

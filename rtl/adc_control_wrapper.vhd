@@ -281,6 +281,10 @@ begin
       ch_4_freq_valid      => ch_4_valid,
       ch_4_freq_sign       => ch_4_sign,
       ch_4_freq_sign_valid => ch_4_sign_valid,
+      ch_5_freq_data       => ch_5_freq,
+      ch_5_freq_valid      => ch_5_valid,
+      ch_5_freq_sign       => ch_5_sign,
+      ch_5_freq_sign_valid => ch_5_sign_valid,
       local_osc_data       => local_osc,
       local_osc_valid      => local_osc_valid,
       beam_selector        => beam_selector
